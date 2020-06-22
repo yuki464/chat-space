@@ -39,10 +39,11 @@ Things you may want to cover:
 |email|string|null: false, add_index:users, :email, unique: true|
 |password|string|
 ### Association
-- has-many :group_messages
+- has-many :messages
 - has-many :groups_users
+- has-many :groups, through: :groups_users
 
-## group_messageテーブル
+## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text| null:false
@@ -51,11 +52,15 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 ## Association
 - belong_to :user
+- belong_to :group
 
-## groupテーブル
+
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+
+|group_name|text|
 ## Association
-- 
+- has_many :groups_users
+- has_many :users, through: groups_users
+- has_many :messages
