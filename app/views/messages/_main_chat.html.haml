@@ -1,0 +1,31 @@
+.Main
+  .Main__header
+    .Main__header__left
+      .Main__header__left__name
+        test
+        .member_name
+          takasi
+    .Main__header__right
+      =link_to "#", class:"Main__header__right__edit"do
+        edit
+  .Main__main
+    .Main__main__name
+      yuki
+      .date
+        202020202020
+    .Main__main__message
+      コンチわーーー
+    .Main__main__name
+      yuki
+      .date
+        202020202020
+    .Main__main__message
+      コンチわーーー          
+  .Main__footer
+    .Main__footer__form
+      .input-box
+        %input{type: "text", class:"input-box__text", placeholder: "type a message"}
+          %label{class: "input-box__text__image"}
+            = icon('fas', 'image', class:"input-box__text__image__icon")
+            %input{type: "file",class:"input-box__text__image__file"}
+      %input{type:"submit", class:"Main__footer__form__send", value:"Send"}
