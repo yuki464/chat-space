@@ -2,11 +2,11 @@
   .Side__header
     .Side__header--box
       .Side__header--box_name
-        yuki
+        = current_user.name
       .Side__header--box_logo
         =link_to "#",class:"Side__header--box_logo-btn Side__header--box_logo-btn_edit"do
           =icon('far', 'edit')
-        =link_to "#",class:"Side__header--box_logo-btn Side__header--box_logo-btn_cog "do
+        =link_to edit_user_path(current_user),class:"Side__header--box_logo-btn Side__header--box_logo-btn_cog "do
           =icon('fas', 'cog')
   .Side__group
     .Side__group__list
