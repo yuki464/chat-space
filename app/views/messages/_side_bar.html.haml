@@ -10,10 +10,10 @@
           =icon('fas', 'cog')
   .Side__group
     .Side__group__list
-      .groupname
-        tesut
-      .latest-message 
-        mada
-    .Side__group__list
-      .groupname
-      .latest-message
+      - current_user.groups.each do |group|
+        = link_to '#' do
+          .groupname
+            = group.name
+          .latest-message 
+            mada
+    
