@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
+    
   end
   def create
     @message = @group.messages.new(message_params)
@@ -14,10 +15,11 @@ class MessagesController < ApplicationController
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
+    
   end
 
   private
-  
+
   def message_params
     params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end

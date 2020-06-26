@@ -2,11 +2,15 @@
   .Main__header
     .Main__header__left
       .Main__header__left__name
+        =@group.name
         .member_name
-          aaaa
+          Member:
+          - @group.users.each do |member|
+            =member.name
+
     .Main__header__right
-      =link_to "#", class:"Main__header__right__edit"do
-        edit
+      =link_to edit_group_path(current_user), class:"Main__header__right__edit"do
+        Edit
   .Main__main
     = render @messages
   .Main__footer
