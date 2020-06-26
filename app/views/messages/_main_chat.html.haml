@@ -2,30 +2,18 @@
   .Main__header
     .Main__header__left
       .Main__header__left__name
-        test
         .member_name
-          takasi
+          aaaa
     .Main__header__right
       =link_to "#", class:"Main__header__right__edit"do
         edit
   .Main__main
-    .Main__main__name
-      yuki
-      .date
-        202020202020
-    .Main__main__message
-      コンチわーーー
-    .Main__main__name
-      =current_user.name
-      .date
-        =User.created_at
-    .Main__main__message
-      コンチわーーー          
+    = render @messages
   .Main__footer
-    .Main__footer__form
+    = form_with model: [@group, @message], html: {class: "Main__footer__form"}, local: true do |f|
       .input-box
-        %input{type: "text", class:"input-box__text", placeholder: "type a message"}
-          %label{class: "input-box__text__image"}
-            = icon('fas', 'image', class:"input-box__text__image__icon")
-            %input{type: "file",class:"input-box__text__image__file"}
-      %input{type:"submit", class:"Main__footer__form__send", value:"Send"}
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__text__image' do
+          = icon('far', 'image', class: 'input-box__text__image__icon')
+          = f.file_field :image, class: 'input-box__text__image__file'
+      = f.submit 'Send', class: 'Main__footer__form__send'
