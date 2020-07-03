@@ -7,14 +7,14 @@ $(function(){
           ${message.user_name}
           <div class="date">
             ${message.created_at}
-        </div>
-          </div>
-              <div class="Main__main__chat__message">
-                  <p class="Main__main__chat__message__content">
-                      ${message.content}
-                  </p>
-                    <img class="Main__main_message__image" src="${message.image}">
-                   </div>`
+              </div>
+                </div>
+                  <div class="Main__main__chat__message">
+                      <p class="Main__main__chat__message__content">
+                          ${message.content}
+                      </p>
+                        <img class="Main__main_message__image" src="${message.image}">
+                          </div>`
       return html;
     }
     else{
@@ -30,7 +30,7 @@ $(function(){
                   <p class="Main__main__chat__message__content">
                     ${message.content}
                   </p>
-                  </div>`
+                        </div>`
       return html;
     };
   }
