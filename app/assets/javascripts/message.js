@@ -3,34 +3,34 @@ $(function(){
     if (message.image){
       let html =`
       <div class="Main__main__chat">
-      <div class="Main__main__chat__name">
-      ${message.user_name}
-      <div class="date">
-      ${message.created_at}
-      </div>
-      </div>
-      <div class="Main__main__chat__message">
-      <p class="Main__main__chat__message__content">
-      ${message.content}
-      </p>
-      <img class="Main__main_message__image" src="${message.image}">
-      </div>`
+        <div class="Main__main__chat__name">
+          ${message.user_name}
+          <div class="date">
+            ${message.created_at}
+        </div>
+          </div>
+              <div class="Main__main__chat__message">
+                  <p class="Main__main__chat__message__content">
+                      ${message.content}
+                  </p>
+                    <img class="Main__main_message__image" src="${message.image}">
+                   </div>`
       return html;
     }
     else{
       let html =`
       <div class="Main__main__chat">
-      <div class="Main__main__chat__name">
-      ${message.user_name}
-      <div class="date">
-      ${message.created_at}
-      </div>
-      </div>
-      <div class="Main__main__chat__message">
-      <p class="Main__main__chat__message__content">
-      ${message.content}
-      </p>
-      </div>`
+        <div class="Main__main__chat__name">
+          ${message.user_name}
+            <div class="date">
+              ${message.created_at}
+          </div>
+            </div>
+              <div class="Main__main__chat__message">
+                  <p class="Main__main__chat__message__content">
+                    ${message.content}
+                  </p>
+                  </div>`
       return html;
     };
   }
