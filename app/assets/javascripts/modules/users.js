@@ -35,7 +35,7 @@ $(function(){
       dataType: "json"
     })
     .done(function(users){
-      $("UserSearchResult").empty();
+      $("#UserSearchResult").empty();
       if (users.length !== 0){
         users.forEach(function(user){
           addUser(user);
