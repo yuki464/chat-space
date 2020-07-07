@@ -10,7 +10,6 @@
   height: 100vh;
   font-weight: bold;
   color: white;
-  overflow: scroll;
     &__header{
     height: 100px;
     display: flex;
@@ -39,6 +38,10 @@
       }
     }
     &__group{
+      background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+    overflow: scroll;
       &__box{
       &__list{
         text-decoration: none;
