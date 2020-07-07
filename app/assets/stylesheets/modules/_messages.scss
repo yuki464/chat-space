@@ -43,18 +43,24 @@
     padding: 0 20px;
     overflow: scroll;
       &__box{
+        box-sizing: border-box;
+        padding: 20px 0 40px;
       &__list{
+        .group{
+          color: #fff;
         text-decoration: none;
-        height: 65px;
-        padding: 20px 20px 40px 20px;
+        }
+        color: #fff;
+        text-decoration: none;
+        
         .groupname{
           font-size: 15px;
-          margin-bottom: 6px;
           text-decoration: none;
         color: #ffffff;
         }
         .latest-message {
           font-size: 11px;
+            margin-top: 5px;
           text-decoration: none;
           color: #ffffff;
         }
