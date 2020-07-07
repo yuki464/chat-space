@@ -45,29 +45,25 @@
       &__box{
         box-sizing: border-box;
         padding: 20px 0 40px;
-      &__list{
-        .group{
+          .group{
+            color: #fff;
+          text-decoration: none;
+          }
           color: #fff;
-        text-decoration: none;
-        }
-        color: #fff;
-        text-decoration: none;
-        
-        .groupname{
-          font-size: 15px;
-          text-decoration: none;
-        color: #ffffff;
-        }
-        .latest-message {
-          font-size: 11px;
+          
+          .groupname{
+            font-size: 15px;
+            color: #ffffff;
+          }
+          .latest-message {
+            font-size: 11px;
             margin-top: 5px;
-          text-decoration: none;
-          color: #ffffff;
+            color: #ffffff;
+          }
         }
-      }
     }
     }
-  }
+  
 
 
 .Main{
@@ -86,8 +82,10 @@
             &__name{
               font-size: 20px;
                 .member_name{
-                  color: #999999;
+                  color: #999;
+                  display: flex;
                   font-size: 12px;
+                  margin-top: 15px;
                 }
             }
         }
@@ -107,21 +105,23 @@
     }
 
     &__main{
-      font-weight: bold;
-      height: calc(100vh - 190px);
       background-color: #fafafa;
-      padding: 35px 0px 40px 12px;
+      box-sizing: border-box;
+      padding: 35px 40px 0;
+      height: calc(100vh - 100px - 90px);
       overflow: scroll;
       &__chat{
         &__name{
+            font-weight: bold;
             padding-bottom: 12px;
             color: #333333;
             font-size: 16px;
             display: flex;
             .date{
-              color: #999999;
+              color: #999;
               font-size: 12px;
-              margin-left: 5px;
+              font-weight: normal;
+              padding-left: 10px;
             }
         }
         &__message{

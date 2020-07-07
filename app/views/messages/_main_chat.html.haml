@@ -9,7 +9,7 @@
             =member.name
 
     .Main__header__right
-      =link_to edit_group_path(current_user), class:"Main__header__right__edit"do
+      =link_to edit_group_path(@group), class:"Main__header__right__edit"do
         Edit
   .Main__main
     = render @messages

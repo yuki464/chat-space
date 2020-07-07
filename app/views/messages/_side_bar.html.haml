@@ -9,12 +9,10 @@
         =link_to edit_user_path(current_user),class:"Side__header--box_logo-btn Side__header--box_logo-btn_cog "do
           =icon('fas', 'cog')
   .Side__group
-    .Side__group__box
-      .Side__group__box__list
-        - current_user.groups.each do |group|
-          = link_to group_messages_path(group),class:"group" do
-            .groupname
-              = group.name
-            .latest-message 
-              = group.show_last_message
-    
+    - current_user.groups.each do |group|
+      .Side__group__box
+        = link_to group_messages_path(group),class:"group" do
+          .groupname
+            = group.name
+          .latest-message 
+            = group.show_last_message
