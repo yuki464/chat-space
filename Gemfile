@@ -5,6 +5,7 @@ gem 'devise'
 gem 'pry-rails'
 
 gem 'carrierwave'
+gem 'fog-aws'
 gem 'mini_magick'
 
 ruby '2.6.5'
