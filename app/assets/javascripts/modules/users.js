@@ -49,6 +49,7 @@ $(function(){
     .fail(function(){
       alert("通信エラーです。ユーザーが表示できません.");
     });
+  });
     $('#UserSearchResult').on("click", ".ChatMember__add",function(){
       const userName = $(this).attr("data-user-name");
       const userId = $(this).attr("data-user-id");
@@ -57,6 +58,5 @@ $(function(){
     });
     $(".ChatMembers").on("click",".ChatMember__remove", function(){
       $(this).parent().remove();
-    })
   });
 });
